@@ -2,6 +2,19 @@
 name = "simple-vector2d"
 version = "0.1.0"
 authors = ["LFalch <lucas@wasd.dk>"]
+description="Simple 2D vector implementation"
+documentation="http://lfalch.github.io/simple-vector2d/simple-vector2d/"
+repository="https://github.com/LFalch/simple-vector2d"
+homepage="https://github.com/LFalch/simple-vector2d"
+readme="README.md"
+keywords=["vectors"]
+license="MIT"
+exclude = [
+    ".gitignore",
+    "README.md",
+    ".travis.yml",
+    "appveyor.yml"
+]
 
 [dependencies]
 num-traits = "0.1.35"
