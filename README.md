@@ -15,4 +15,4 @@ simple_vector2d = "0.1"
 
 ## Documentation
 
-[Read documentation](http://lfalch.github.io/simple-vector2d/simple-vector2d/)
+[Read documentation](http://lfalch.github.io/simple-vector2d/simple_vector2d/)
