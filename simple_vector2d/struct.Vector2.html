@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Vector2` struct in crate `simple_vector2d`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Vector2">
+
+    <title>simple_vector2d::Vector2 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>simple_vector2d</a></p><script>window.sidebarCurrent = {name: 'Vector2', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>simple_vector2d</a>::<wbr><a class='struct' href=''>Vector2</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-47' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Vector2&lt;T&gt;(pub T, pub T);</pre><div class='docblock'><p>Representation of a mathematical vector e.g. a position or velocity</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../num_traits/float/trait.Float.html' title='num_traits::float::Float'>Float</a>&gt; <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-66' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#44-95' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.unit_vector' class='method'><code>fn <a href='#method.unit_vector' class='fnname'>unit_vector</a>(direction: T) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a new unit vector in a specific direction</p>
+</div><h4 id='method.normalise' class='method'><code>fn <a href='#method.normalise' class='fnname'>normalise</a>(self) -&gt; Self</code></h4>
+<div class='docblock'><p>Normalises the vector</p>
+</div><h4 id='method.length' class='method'><code>fn <a href='#method.length' class='fnname'>length</a>(self) -&gt; T</code></h4>
+<div class='docblock'><p>Returns the magnitude/length of the vector</p>
+</div><h4 id='method.length_squared' class='method'><code>fn <a href='#method.length_squared' class='fnname'>length_squared</a>(self) -&gt; T</code></h4>
+<div class='docblock'><p>Returns the magnitude/length of the vector squared</p>
+</div><h4 id='method.direction' class='method'><code>fn <a href='#method.direction' class='fnname'>direction</a>(self) -&gt; T</code></h4>
+<div class='docblock'><p>Returns direction the vector is pointing</p>
+</div><h4 id='method.direction_to' class='method'><code>fn <a href='#method.direction_to' class='fnname'>direction_to</a>(self, other: Self) -&gt; T</code></h4>
+<div class='docblock'><p>Returns direction towards another vector</p>
+</div><h4 id='method.distance_to' class='method'><code>fn <a href='#method.distance_to' class='fnname'>distance_to</a>(self, other: Self) -&gt; T</code></h4>
+<div class='docblock'><p>Returns the distance betweens two vectors</p>
+</div><h4 id='method.distance_to_squared' class='method'><code>fn <a href='#method.distance_to_squared' class='fnname'>distance_to_squared</a>(self, other: Self) -&gt; T</code></h4>
+<div class='docblock'><p>Returns the distance betweens two vectors</p>
+</div><h4 id='method.is_any_nan' class='method'><code>fn <a href='#method.is_any_nan' class='fnname'>is_any_nan</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns <code>true</code> if either component is <code>NaN</code>.</p>
+</div><h4 id='method.is_any_infinite' class='method'><code>fn <a href='#method.is_any_infinite' class='fnname'>is_any_infinite</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns <code>true</code> if either component is positive or negative infinity.</p>
+</div><h4 id='method.is_all_finite' class='method'><code>fn <a href='#method.is_all_finite' class='fnname'>is_all_finite</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns <code>true</code> if both components are neither infinite nor <code>NaN</code>.</p>
+</div><h4 id='method.is_all_normal' class='method'><code>fn <a href='#method.is_all_normal' class='fnname'>is_all_normal</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns <code>true</code> if both components are neither zero, infinite, subnormal nor <code>NaN</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-117' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#116-122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.dot' class='method'><code>fn <a href='#method.dot' class='fnname'>dot</a>(self, other: Self) -&gt; T::Output::Output <span class='where'>where T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>, T::Output: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a></span></code></h4>
+<div class='docblock'><p>Returns the dot product of two vectors</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-6' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-9' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-15' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-31' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-39' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-45' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#11' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-122' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#124-130' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T::Output&gt;</code></h4>
+<div class='docblock'><p>The resulting type after applying the <code>+</code> operator</p>
+</div><h4 id='method.add' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html#tymethod.add' class='fnname'>add</a>(self, rhs: Self) -&gt; Self::<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Output</a></code></h4>
+<div class='docblock'><p>The method for the <code>+</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html' title='core::ops::Sub'>Sub</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html' title='core::ops::Sub'>Sub</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-128' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#132-138' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-1' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T::Output&gt;</code></h4>
+<div class='docblock'><p>The resulting type after applying the <code>-</code> operator</p>
+</div><h4 id='method.sub' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html#tymethod.sub' class='fnname'>sub</a>(self, rhs: Self) -&gt; Self::<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html' title='core::ops::Sub'>Output</a></code></h4>
+<div class='docblock'><p>The method for the <code>-</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.AddAssign.html' title='core::ops::AddAssign'>AddAssign</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.AddAssign.html' title='core::ops::AddAssign'>AddAssign</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-134' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#140-145' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.add_assign' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.AddAssign.html#tymethod.add_assign' class='fnname'>add_assign</a>(&amp;mut self, rhs: Self)</code></h4>
+<div class='docblock'><p>The method for the <code>+=</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.SubAssign.html' title='core::ops::SubAssign'>SubAssign</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.SubAssign.html' title='core::ops::SubAssign'>SubAssign</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-139' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#147-152' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.sub_assign' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.SubAssign.html#tymethod.sub_assign' class='fnname'>sub_assign</a>(&amp;mut self, rhs: Self)</code></h4>
+<div class='docblock'><p>The method for the <code>-=</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.MulAssign.html' title='core::ops::MulAssign'>MulAssign</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.MulAssign.html' title='core::ops::MulAssign'>MulAssign</a>&lt;T&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-144' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#154-159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.mul_assign' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.MulAssign.html#tymethod.mul_assign' class='fnname'>mul_assign</a>(&amp;mut self, rhs: T)</code></h4>
+<div class='docblock'><p>The method for the <code>*=</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.DivAssign.html' title='core::ops::DivAssign'>DivAssign</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.DivAssign.html' title='core::ops::DivAssign'>DivAssign</a>&lt;T&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-149' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#161-166' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.div_assign' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.DivAssign.html#tymethod.div_assign' class='fnname'>div_assign</a>(&amp;mut self, rhs: T)</code></h4>
+<div class='docblock'><p>The method for the <code>/=</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;T&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-154' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#168-174' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-2' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T::Output&gt;</code></h4>
+<div class='docblock'><p>The resulting type after applying the <code>*</code> operator</p>
+</div><h4 id='method.mul' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html#tymethod.mul' class='fnname'>mul</a>(self, rhs: T) -&gt; Self::<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Output</a></code></h4>
+<div class='docblock'><p>The method for the <code>*</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Div.html' title='core::ops::Div'>Div</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Div.html' title='core::ops::Div'>Div</a>&lt;T&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-160' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#176-182' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-3' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Div.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T::Output&gt;</code></h4>
+<div class='docblock'><p>The resulting type after applying the <code>/</code> operator</p>
+</div><h4 id='method.div' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Div.html#tymethod.div' class='fnname'>div</a>(self, rhs: T) -&gt; Self::<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Div.html' title='core::ops::Div'>Output</a></code></h4>
+<div class='docblock'><p>The method for the <code>/</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html' title='core::ops::Neg'>Neg</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html' title='core::ops::Neg'>Neg</a> for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-166' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#184-190' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-4' class='type'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T::Output&gt;</code></h4>
+<div class='docblock'><p>The resulting type after applying the <code>-</code> operator</p>
+</div><h4 id='method.neg' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html#tymethod.neg' class='fnname'>neg</a>(self) -&gt; Self::<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html' title='core::ops::Neg'>Output</a></code></h4>
+<div class='docblock'><p>The method for the unary <code>-</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a>T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-171' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#192-197' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a>T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a>T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-177' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#199-204' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(array: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a>T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>T, T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-183' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#206-211' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>T, T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>T, T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt; for <a class='struct' href='../simple_vector2d/struct.Vector2.html' title='simple_vector2d::Vector2'>Vector2</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-187' class='srclink' href='../src/simple_vector2d/src/lib.rs.html#213-218' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(tuple: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>T, T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "simple_vector2d";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
