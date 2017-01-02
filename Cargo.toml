@@ -18,3 +18,4 @@ exclude = [
 
 [dependencies]
 num-traits = "0.1.35"
+rustc-serialize = {version = "0.3", optional = true}
