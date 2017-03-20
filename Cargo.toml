@@ -19,3 +19,9 @@ exclude = [
 [dependencies]
 num-traits = "0.1.35"
 rustc-serialize = {version = "0.3", optional = true}
+serde_derive = {version = "0.9", optional = true}
+serde = {version = "0.9", optional = true}
+
+[features]
+default = []
+serde-serial = ["serde", "serde_derive"]

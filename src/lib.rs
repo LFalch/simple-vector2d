@@ -7,11 +7,16 @@ extern crate num_traits;
 #[cfg(feature="rustc-serialize")]
 extern crate rustc_serialize;
 
+#[cfg(feature="serde_derive")]
+#[cfg_attr(feature="serde_derive", macro_use)]
+extern crate serde_derive;
+
 use num_traits::Float;
 
 /// Representation of a mathematical vector e.g. a position or velocity
 #[derive(Copy, Clone, Debug, PartialEq, Eq, Default)]
 #[cfg_attr(feature="rustc-serialize", derive(RustcDecodable, RustcEncodable))]
+#[cfg_attr(feature="serde_derive", derive(Serialize, Deserialize))]
 pub struct Vector2<T>(pub T, pub T);
 
 use std::ops::{Add, AddAssign, Sub, SubAssign, Mul, MulAssign, Div, DivAssign, Neg};
