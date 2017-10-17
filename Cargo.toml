@@ -1,6 +1,6 @@
 [package]
 name = "simple-vector2d"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["LFalch <lucas@wasd.dk>"]
 description="Simple 2D vector implementation"
 documentation="http://lfalch.github.io/simple-vector2d/simple-vector2d/"
@@ -19,8 +19,8 @@ exclude = [
 [dependencies]
 num-traits = "0.1.35"
 rustc-serialize = {version = "0.3", optional = true}
-serde_derive = {version = "0.9", optional = true}
-serde = {version = "0.9", optional = true}
+serde_derive = {version = ">=0.9.0, ~1", optional = true}
+serde = {version = ">=0.9.0, ~1", optional = true}
 
 [features]
 default = []
