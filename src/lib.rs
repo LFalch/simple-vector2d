@@ -122,10 +122,25 @@ macro_rules! impl_for {
 }impl_for!{f32 f64}
 
 impl<T> Vector2<T> {
+    /// Returns the normal vector (aka. hat vector) of this vector i.e. a perpendicular vector
+    ///
+    /// Not to be confused with `normalise` which returns a unit vector
+    ///
+    /// Defined as (-y, x)
+    pub fn normal(self) -> Self
+    where T: Neg<Output=T> {
+        let Vector2(x, y) = self;
+        Vector2(-y, x)
+    }
     /// Returns the dot product of two vectors
     pub fn dot(self, other: Self) -> <<T as Mul>::Output as Add>::Output
     where T: Mul, <T as Mul>::Output: Add{
         self.0 * other.0 + self.1 * other.1
+    }
+    /// Returns the determinant of two vectors
+    pub fn det(self, other: Self) -> <<T as Mul>::Output as Sub>::Output
+    where T: Mul, <T as Mul>::Output: Sub {
+        self.0 * other.1 - self.1 * other.0
     }
 }
 
